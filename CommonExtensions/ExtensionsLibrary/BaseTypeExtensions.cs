@@ -91,7 +91,7 @@ namespace ExtensionsLibrary
         public static bool ReplaceFirst(this string str, string oldValue, string newValue, out string val)
         {
             val = str;
-            if (str.IsNullOrEmpty())
+            if (string.IsNullOrEmpty(str))
             {
                 return false;
             }
@@ -111,18 +111,18 @@ namespace ExtensionsLibrary
         /// </summary>
         /// <param name="path">图片途径</param>
         /// <returns></returns>
-        public static string AddHttpToPath(this string path)
-        {
-            if (path.IsNullOrEmpty())
-            {
-                return string.Empty;
-            }
-            if (!path.StartsWith("http", StringComparison.OrdinalIgnoreCase))
-            {
-                path = "http://" + path;
-            }
-            return path.SubstringByByte(300);
-        }
+        //public static string AddHttpToPath(this string path)
+        //{
+        //    if (string.IsNullOrEmpty(path))
+        //    {
+        //        return string.Empty;
+        //    }
+        //    if (!path.StartsWith("http", StringComparison.OrdinalIgnoreCase))
+        //    {
+        //        path = "http://" + path;
+        //    }
+        //    return path.SubstringByByte(300);
+        //}
 
         /// <summary>
         /// 字符串转long
